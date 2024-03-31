@@ -11,6 +11,10 @@ Route::get('/submit', function () {
     return view('submit');
 });
 
+Route::get('/posted', function () {
+    return view('posted');
+});
+
 Route::get('/feedback', function () {
     return view('feedback');
 });

@@ -1,5 +1,5 @@
 @extends("layout")
-@section('title', 'ارسال پیام')
+@section('title', 'ارسال پست')
 @section('body')
 
     <div class="container">
