@@ -43,7 +43,7 @@
                         <a class="nav-link px-2" href="#">بازخورد</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link bg-dark text-light rounded-3 px-3" href="#">ارسال پست</a>
+                        <a class="nav-link bg-dark text-light rounded-3 px-3" href="#">ارسال پیام</a>
                     </li>
                 </ul>
             </div>

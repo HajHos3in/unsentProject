@@ -1,5 +1,5 @@
 @extends("layout")
-@section('title', 'ارسال پست')
+@section('title', 'ارسال پیام')
 @section('body')
 
     <div class="container">
@@ -7,7 +7,7 @@
             <form action="" method="post" class="col-11 col-md-7 col-lg-4 d-flex flex-column">
 
                 <ul class="list-group list-group-flush list-group-item-light mb-3 pt-3">
-                    <li class="list-group-item text-center fw-bold font-size-22 p-3">ارسال پست جدید</li>
+                    <li class="list-group-item text-center fw-bold font-size-22 p-3">ارسال پیام جدید</li>
                     <li class="list-group-item">اشتراک پیامی که هیچ وقت ارسال نشد :)</li>
                     <li class="list-group-item">یا انتقال یک تجربه مهم</li>
                     <li class="list-group-item">یا اشتراک گذاری یک دل نوشته آموزنده</li>
@@ -42,7 +42,7 @@
                 <div class="col d-flex align-items-center justify-content-between my-2 p-1">
                     <input type="color" class="form-control form-control-color" value="#563d7c" id="colorInput" title="Choose your color">
 
-                    <button type="submit" class="btn btn-dark">ثبت پست</button>
+                    <button type="submit" class="btn btn-dark">ثبت پیام</button>
                 </div>
 
             </form>
@@ -76,7 +76,7 @@
             });
 
             $("form").on("submit",function (){
-                if(confirm("از ارسال پست خود اطمینان دارید؟")){return true;}else{return false;}
+                if(confirm("از ارسال پیام خود اطمینان دارید؟")){return true;}else{return false;}
             });
         });
     </script>
