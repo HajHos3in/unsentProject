@@ -9,25 +9,30 @@
     </div>
 
     <div class="container">
-        <div class="row">
-            <div class="input-group input-group-lg mb-3">
+        <form method="get" action="{{ route("search") }}">
 
-                <input
-                    type="text"
-                    class="form-control py-3"
-                    placeholder="اسمتو جستجو کن..."
-                    name=""
-                />
+            <div class="row">
+                <div class="input-group input-group-lg mb-3">
 
-                <button class="btn btn-outline-dark" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mx-2" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                    </svg>
+                        <input
+                            type="text"
+                            class="form-control py-3"
+                            placeholder="اسمتو جستجو کن..."
+                            name="q"
+                        />
 
-                    جستجو
-                </button>
+                        <button class="btn btn-outline-dark" type="submit">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search mx-2" viewBox="0 0 16 16">
+                                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+                            </svg>
+
+                            جستجو
+                        </button>
+
+
+                </div>
             </div>
-        </div>
+        </form>
     </div>
 
     <div class="container">

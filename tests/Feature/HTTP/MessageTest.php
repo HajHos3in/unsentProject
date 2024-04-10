@@ -28,4 +28,19 @@ class MessageTest extends TestCase
             return $message->name === $name;
         });
     }
+
+    public function testMessageSearchWithId(): void
+    {
+        $this->withoutExceptionHandling();
+
+        $messages = Message::factory()->count(20)->create();
+
+
+        $response = $this->get(route("search",[
+            "q" => $messages[10]->id
+        ]));
+
+        $response->assertViewIs("search");
+        $response->assertSee($messages[10]->name);
+    }
 }

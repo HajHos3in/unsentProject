@@ -37,4 +37,15 @@ class MessageController extends Controller
 
         return view("posted", ["message" => $message]);
     }
+
+    public function search(Request $request): View
+    {
+        $request->validate([
+            "q" => "required|string|max:128"
+        ]);
+
+        $messages = Message::where("id",$request->q)->orWhere("name","like","%". $request->q ."%")->orWhere("message","like","%". $request->q ."%")->limit(50)->get();
+
+        return view("search",[ "messages" => $messages ]);
+    }
 }

@@ -6,7 +6,7 @@
         <div class="row align-items-center justify-content-center py-5 min-vh-100">
             <div class="col-11 col-md-7 col-lg-4 d-flex flex-column">
 
-                <p class="bg-light p-2"> خیلی ممنون بابت ثبت پیامتون، شما می توانید در یک ساعت آینده دوباره پیام جدیدی برای ما ارسال کنید. </p>
+                <p class="bg-light p-2"> خیلی ممنون بابت ثبت پیامتان، شما می توانید در یک ساعت آینده دوباره پیام جدیدی برای ما ارسال کنید. </p>
 
                 <div class=" p-2 d-flex align-items-center justify-content-between">
                     <label>لینک پیام شما: </label>
