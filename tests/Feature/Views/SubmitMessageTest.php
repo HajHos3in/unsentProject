@@ -16,6 +16,6 @@ class SubmitMessageTest extends TestCase
         $response->assertStatus(200);
         $response->assertViewIs("submit");
         $response->assertSee("ارسال پیام جدید");
-        $response->assertSee('<input type="color" class="form-control form-control-color" value="#563d7c" id="colorInput" title="Choose your color">',false);
+        $response->assertSee('<input type="color" name="backgroundColor" class="form-control form-control-color" value="#ced4da" id="colorInput" title="Choose your color">',false);
     }
 }

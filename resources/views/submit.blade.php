@@ -4,7 +4,7 @@
 
     <div class="container">
         <div class="row align-items-center justify-content-center py-5 min-vh-100">
-            <form action="" method="post" class="col-11 col-md-7 col-lg-4 d-flex flex-column">
+            <form action="{{ route("StoreMessage") }}" method="post" class="col-11 col-md-7 col-lg-4 d-flex flex-column">
 
                 <ul class="list-group list-group-flush list-group-item-light mb-3 pt-3">
                     <li class="list-group-item text-center fw-bold font-size-22 p-3">ارسال پیام جدید</li>
@@ -15,6 +15,16 @@
                 </ul>
 
                 @csrf
+
+                @if ($errors->any())
+                    <div class="alert alert-danger py-2" dir="auto">
+                        <ul class="m-1">
+                            @foreach ($errors->all() as $error)
+                                <li>{{ $error }}</li>
+                            @endforeach
+                        </ul>
+                    </div>
+                @endif
 
                 <div class="col d-flex">
                     <div class="col p-2 message-box">
@@ -30,7 +40,7 @@
                                     <input type="text" name="name" class="form-control" id="Input1" required  maxlength="16" placeholder="مخاطب">
                                 </div>
                             </label>
-                            <textarea id="messageInput" class="py-2 px-3 text-break text-justify font-size-22 lh-lg my-1 overflow-hidden rounded-3" dir="auto" maxlength="128" style="flex: 1 1 auto;" required></textarea>
+                            <textarea id="messageInput" name="message" class="py-2 px-3 text-break text-justify font-size-22 lh-lg my-1 overflow-hidden rounded-3" dir="auto" maxlength="128" style="flex: 1 1 auto;" required></textarea>
 
                             <small class="text-danger fw-normal">پیام ها پس از ثبت، حذف یا ویرایش نمی شوند.</small>
 
@@ -40,7 +50,7 @@
                 </div>
 
                 <div class="col d-flex align-items-center justify-content-between my-2 p-1">
-                    <input type="color" class="form-control form-control-color" value="#563d7c" id="colorInput" title="Choose your color">
+                    <input type="color" name="backgroundColor" class="form-control form-control-color" value="#ced4da" id="colorInput" title="Choose your color">
 
                     <button type="submit" class="btn btn-dark">ثبت پیام</button>
                 </div>

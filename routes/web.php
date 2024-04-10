@@ -4,16 +4,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('index');
-});
+})->name("HomePage");
 
 
-Route::get('/submit', function () {
-    return view('submit');
-});
+Route::get('/submit', [\App\Http\Controllers\MessageController::class,"submit"])->name("SubmitPage");
 
-Route::get('/posted', function () {
-    return view('posted');
-});
+Route::get('/posted', [\App\Http\Controllers\MessageController::class,"redirectToSubmit"]);
+Route::post('/posted', [\App\Http\Controllers\MessageController::class,"store"])->name("StoreMessage");
 
 Route::get('/feedback', function () {
     return view('feedback');

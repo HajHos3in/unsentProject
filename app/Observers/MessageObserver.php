@@ -4,6 +4,7 @@ namespace App\Observers;
 
 use App\Models\Message;
 use Carbon\Carbon;
+use Illuminate\Validation\ValidationException;
 
 class MessageObserver
 {
@@ -16,7 +17,7 @@ class MessageObserver
         $message->message = mb_substr($message->message,0,128);
 
         if(Message::where("ip",$message->ip)->where('created_at',">",Carbon::now()->subHours(1))->count() != 0){
-            throw new \Exception('You can only send one message per hour.');
+            throw ValidationException::withMessages(['time' => 'You can only send one message per hour.']);
         }
     }
 
