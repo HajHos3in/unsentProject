@@ -10,7 +10,7 @@
 
                 <div class=" p-2 d-flex align-items-center justify-content-between">
                     <label>لینک پیام شما: </label>
-                    <a href="" class="text-primary-emphasis">unsentproject.ir/?q={{ $message->id }}</a>
+                    <a href="{{ route("search",["q" => $message->id ]) }}" class="text-primary-emphasis">unsentproject.ir/?q={{ $message->id }}</a>
                 </div>
 
                 <div class="col-12 d-flex">

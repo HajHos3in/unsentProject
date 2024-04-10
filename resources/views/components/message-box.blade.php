@@ -7,7 +7,7 @@
             </svg>
             مخاطب: {{ $name }}
         </label>
-        <div class="p-3 text-break text-justify text-light font-size-24 lh-lg my-1 overflow-hidden" dir="auto" style="flex: 1 1 auto; background-color: {{ $backgroundColor }};">
+        <div class="p-3 text-break text-justify {{ isDark($backgroundColor) ? "text-light" : "text-dark" }} font-size-24 lh-lg my-1 overflow-hidden" dir="auto" style="flex: 1 1 auto; background-color: {{ $backgroundColor }};">
             {{ $message }}
         </div>
 
