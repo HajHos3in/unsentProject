@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Message;
+use App\Rules\badwords;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
@@ -23,8 +24,8 @@ class MessageController extends Controller
     public function store(Request $request): View
     {
         $request->validate([
-            "name" => "required|string|min:3|max:64",
-            "message" => "required|min:3|max:128|string",
+            "name" => ["required","min:2","max:64","string",new badwords],
+            "message" => ["required","min:3","max:128","string",new badwords],
             "backgroundColor" => "required|hex_color"
         ]);
 
