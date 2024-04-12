@@ -26,8 +26,11 @@
 
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-        <div class="container border-dark border-bottom border-1 pb-2">
-            <a class="navbar-brand fw-bold font-size-24" href="#">حرفای ناگفته</a>
+        <div class="container border-dark border-bottom border-1 pb-2 justify-content-end">
+            <a class="navbar-brand fw-bold font-size-24 me-auto" href="#">حرفای ناگفته</a>
+
+            <a class="nav-link bg-dark text-light rounded-3 px-3 py-2 my-1 mx-3 d-lg-none" href="{{ route("SubmitPage") }}">+</a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsiveTop" aria-controls="navbarResponsiveTop" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -98,7 +101,7 @@
 
             <!-- Copyright -->
             <div class="row text-center p-3 bg-black bg-opacity-50" dir="ltr">
-                <a class="text-white" href="https://mdbootstrap.com/">© {{ date("Y") }} Copyright: Mr.Hos3in</a>
+                <a class="text-white" href="https://instagram.com/mr.m.hos3in" target="_blank">© {{ date("Y") }} Copyright: Mr.Hos3in</a>
             </div>
             <!-- Copyright -->
         </footer>
