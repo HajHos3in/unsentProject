@@ -20,8 +20,16 @@ class badwords implements ValidationRule
 
         $badwords = Arr::flatten(config('badwords'));
 
-        if(Str::contains(strtolower($value), $badwords)){
-            $fail('The :attribute contains offensive words.');
+        $matches = array();
+        $matchFound = preg_match_all(
+            "/\b(" . implode("|", $badwords) . ")\b/i",
+            $value,
+            $matches
+        );
+
+        if ($matchFound) {
+            $words = array_unique($matches[0]);
+            $fail('The :attribute contains offensive words. ['.implode(",",$words).']');
         }
     }
 }

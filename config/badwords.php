@@ -1019,7 +1019,7 @@ return [
         'lesbo',
         'lesbos',
         'lez',
-        'lezza/lesbo',
+        'lezza',
         'lezzie',
         'lmao',
         'lmfao',

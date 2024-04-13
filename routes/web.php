@@ -14,9 +14,8 @@ Route::post('/posted', [\App\Http\Controllers\MessageController::class,"store"])
 
 Route::get('/search', [\App\Http\Controllers\MessageController::class,"search"])->name("search");
 
-Route::get('/feedback', function () {
-    return view('feedback');
-});
+Route::get('/feedback', [\App\Http\Controllers\FeedbackController::class,"feedback"])->name("feedback");
+Route::post('/feedback/store', [\App\Http\Controllers\FeedbackController::class,"store"])->name("saveFeedback");
 
 Route::get('/terms', function () {
     return view('terms');

@@ -39,7 +39,7 @@ class MessageTest extends TestCase
 
 
         $this->assertDatabaseCount('messages', 1);
-        $this->assertEquals($error,"You can only send one message per hour.");
+        $this->assertEquals("You can only send one message per hour.", $error);
     }
 
     public function testAddingDuplicateDataInTwoHours(): void
