@@ -40,10 +40,10 @@
                         <a class="nav-link px-2" href="{{ route("HomePage") }}">صفحه اصلی</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-2" href="#">قوانین</a>
+                        <a class="nav-link px-2" href="{{ route("termsPage") }}">قوانین</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link px-2" href="#">بازخورد</a>
+                        <a class="nav-link px-2" href="{{ route("feedbackPage") }}">بازخورد</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link bg-dark text-light rounded-3 px-3" href="{{ route("SubmitPage") }}">ارسال پیام</a>
