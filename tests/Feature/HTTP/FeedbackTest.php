@@ -23,7 +23,7 @@ class FeedbackTest extends TestCase
             "ip" => fake()->ipv4()
         ]);
 
-        $response->assertRedirectToRoute("feedback");
+        $response->assertRedirectToRoute("feedbackPage");
         $this->assertDatabaseHas("feedback",[
             "fullname" => $fullname
         ]);

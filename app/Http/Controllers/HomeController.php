@@ -15,7 +15,7 @@ class HomeController extends Controller
         if ($request->ajax()) {
             $view = "";
             foreach ($messages as $message){
-                $view .= view('components.message-box',["name" => $message->name, "backgroundColor" => $message->backgroundColor, "message" => $message->message])->render();
+                $view .= view('components.message-box',["id" => $message->id, "name" => $message->name, "backgroundColor" => $message->backgroundColor, "message" => $message->message])->render();
             }
 
             return response()->json(['html'=>$view]);

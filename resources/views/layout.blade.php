@@ -27,7 +27,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
         <div class="container border-dark border-bottom border-1 pb-2 justify-content-end">
-            <a class="navbar-brand fw-bold font-size-24 me-auto" href="#">حرفای ناگفته</a>
+            <a class="navbar-brand fw-bold font-size-24 me-auto" href="{{ route("HomePage") }}">حرفای ناگفته</a>
 
             <a class="nav-link bg-dark text-light rounded-3 px-3 py-2 my-1 mx-3 d-lg-none" href="{{ route("SubmitPage") }}">+</a>
 

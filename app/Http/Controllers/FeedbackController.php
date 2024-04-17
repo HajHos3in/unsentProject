@@ -30,6 +30,6 @@ class FeedbackController extends Controller
             "ip" => $request->ip()
         ]);
 
-        return redirect()->route("feedback")->with("msg", "Thanks. Your message has been saved successfully.");
+        return redirect()->route("feedbackPage")->with("msg", "Thanks. Your message has been saved successfully.");
     }
 }

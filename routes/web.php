@@ -19,4 +19,6 @@ Route::get('/search', [\App\Http\Controllers\MessageController::class,"search"])
 Route::get('/feedback', [\App\Http\Controllers\FeedbackController::class,"feedback"])->name("feedbackPage");
 Route::post('/feedback/store', [\App\Http\Controllers\FeedbackController::class,"store"])->name("saveFeedback");
 
+Route::post('/report', [\App\Http\Controllers\ReportController::class,"report"])->name("report");
+
 

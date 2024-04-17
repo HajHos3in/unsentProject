@@ -15,7 +15,7 @@
 
                 <div class="col-12 d-flex">
 
-                    <x-messageBox :name="$message->name" :message="$message->message" :backgroundColor="$message->backgroundColor" />
+                    <x-messageBox :id="$message->id" :name="$message->name" :message="$message->message" :backgroundColor="$message->backgroundColor" />
 
                 </div>
 

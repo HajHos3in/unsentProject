@@ -43,7 +43,7 @@
 
             @foreach($messages as $message)
 
-                <x-messageBox :name="$message->name" :message="$message->message" :backgroundColor="$message->backgroundColor" />
+                <x-messageBox :id="$message->id" :name="$message->name" :message="$message->message" :backgroundColor="$message->backgroundColor" />
 
             @endforeach
 
