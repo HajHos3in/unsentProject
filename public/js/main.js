@@ -64,3 +64,39 @@ function report(id){
         return false;
     }
 }
+
+
+/*function PrintDiv(div)
+{
+    html2canvas((div), {
+        onrendered: function(canvas) {
+            var myImage = canvas.toDataURL();
+            downloadURI(myImage, "UnsentProject.png");
+        }
+    });
+}
+
+function downloadURI(uri, name) {
+    var link = document.createElement("a");
+
+    link.download = name;
+    link.href = uri;
+    document.body.appendChild(link);
+    link.click();
+    //after creating link you should delete dynamic link
+    //clearDynamicLink(link);
+}*/
+
+function PrintDiv(div){
+    html2canvas(div).then(canvas => {
+        const imgUrl = canvas.toDataURL('image/jpeg'); // convert image to base 64 as type of jpeg
+        const image = document.createElement('img') // create an element 'img' which is named as image
+        image.src = imgUrl // equeal to <image src="imgUrl"></image>
+        //document.querySelector('.content').appendChild(image)
+        const a = document.createElement('a')
+        a.href = imgUrl // set <a href=""></a> for downloading
+        a.download = 'UnsentProject'
+        a.click()
+        a.remove()
+    })
+}

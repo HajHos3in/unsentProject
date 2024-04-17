@@ -116,6 +116,7 @@
 
     <script src="{{ asset('js/jquery.min.js') }}"></script>
     <script src="{{ asset('js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('js/html2canvas.min.js') }}"></script>
     <script src="{{ asset('js/main.js') }}?v=1.1"></script>
 
     @stack('scripts')
