@@ -27,7 +27,7 @@ class FeedbackController extends Controller
             "fullname" => $request->fullname,
             "email" => $request->email,
             "text" => $request->text,
-            "ip" => $request->ip()
+            "ip" => getIp()
         ]);
 
         return redirect()->route("feedbackPage")->with("msg", "Thanks. Your message has been saved successfully.");

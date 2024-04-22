@@ -15,3 +15,9 @@ if(!function_exists("isDark")) {
         return array_sum($rgb) < 450;
     }
 }
+
+if(!function_exists("getIp")) {
+    function getIp(){
+        return $_SERVER["HTTP_AR_REAL_IP"] ?? request()->ip();
+    }
+}

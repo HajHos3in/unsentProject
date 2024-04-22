@@ -33,7 +33,7 @@ class MessageController extends Controller
             "name" => $request->name,
             "message" => $request->message,
             "backgroundColor" => $request->backgroundColor,
-            "ip" => $request->ip()
+            "ip" => getIp()
         ]);
 
         return view("posted", ["message" => $message]);

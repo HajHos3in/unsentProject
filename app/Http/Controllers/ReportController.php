@@ -17,14 +17,14 @@ class ReportController extends Controller
                 "integer",
                 "exists:messages,id",
                 Rule::unique('reports')->where(function ($query) use ($request) {
-                    return $query->where('ip', $request->ip())->where('message_id', $request->message_id);
+                    return $query->where('ip', getIp())->where('message_id', $request->message_id);
                 })
             ]
         ]);
 
         report::create([
             "message_id" => $request->message_id,
-            "ip" => $request->ip()
+            "ip" => getIp()
         ]);
 
         $countOfReportsThisMessage = report::where("message_id",$request->message_id)->count();
